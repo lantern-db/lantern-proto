@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             (unknown)
-// source: lantern/v1/lantern.proto
+// source: graph/v1/graph.proto
 
 package v1
 
@@ -39,7 +39,7 @@ func NewLanternServiceClient(cc grpc.ClientConnInterface) LanternServiceClient {
 
 func (c *lanternServiceClient) Illuminate(ctx context.Context, in *IlluminateRequest, opts ...grpc.CallOption) (*IlluminateResponse, error) {
 	out := new(IlluminateResponse)
-	err := c.cc.Invoke(ctx, "/lantern.v1.LanternService/Illuminate", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/graph.v1.LanternService/Illuminate", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -48,7 +48,7 @@ func (c *lanternServiceClient) Illuminate(ctx context.Context, in *IlluminateReq
 
 func (c *lanternServiceClient) GetVertex(ctx context.Context, in *GetVertexRequest, opts ...grpc.CallOption) (*GetVertexResponse, error) {
 	out := new(GetVertexResponse)
-	err := c.cc.Invoke(ctx, "/lantern.v1.LanternService/GetVertex", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/graph.v1.LanternService/GetVertex", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -57,7 +57,7 @@ func (c *lanternServiceClient) GetVertex(ctx context.Context, in *GetVertexReque
 
 func (c *lanternServiceClient) Put(ctx context.Context, in *PutRequest, opts ...grpc.CallOption) (*PutResponse, error) {
 	out := new(PutResponse)
-	err := c.cc.Invoke(ctx, "/lantern.v1.LanternService/Put", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/graph.v1.LanternService/Put", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -66,7 +66,7 @@ func (c *lanternServiceClient) Put(ctx context.Context, in *PutRequest, opts ...
 
 func (c *lanternServiceClient) PutVertex(ctx context.Context, in *PutVertexRequest, opts ...grpc.CallOption) (*PutVertexResponse, error) {
 	out := new(PutVertexResponse)
-	err := c.cc.Invoke(ctx, "/lantern.v1.LanternService/PutVertex", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/graph.v1.LanternService/PutVertex", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func (c *lanternServiceClient) PutVertex(ctx context.Context, in *PutVertexReque
 
 func (c *lanternServiceClient) PutEdge(ctx context.Context, in *PutEdgeRequest, opts ...grpc.CallOption) (*PutEdgeResponse, error) {
 	out := new(PutEdgeResponse)
-	err := c.cc.Invoke(ctx, "/lantern.v1.LanternService/PutEdge", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/graph.v1.LanternService/PutEdge", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -136,7 +136,7 @@ func _LanternService_Illuminate_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/lantern.v1.LanternService/Illuminate",
+		FullMethod: "/graph.v1.LanternService/Illuminate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanternServiceServer).Illuminate(ctx, req.(*IlluminateRequest))
@@ -154,7 +154,7 @@ func _LanternService_GetVertex_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/lantern.v1.LanternService/GetVertex",
+		FullMethod: "/graph.v1.LanternService/GetVertex",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanternServiceServer).GetVertex(ctx, req.(*GetVertexRequest))
@@ -172,7 +172,7 @@ func _LanternService_Put_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/lantern.v1.LanternService/Put",
+		FullMethod: "/graph.v1.LanternService/Put",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanternServiceServer).Put(ctx, req.(*PutRequest))
@@ -190,7 +190,7 @@ func _LanternService_PutVertex_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/lantern.v1.LanternService/PutVertex",
+		FullMethod: "/graph.v1.LanternService/PutVertex",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanternServiceServer).PutVertex(ctx, req.(*PutVertexRequest))
@@ -208,7 +208,7 @@ func _LanternService_PutEdge_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/lantern.v1.LanternService/PutEdge",
+		FullMethod: "/graph.v1.LanternService/PutEdge",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LanternServiceServer).PutEdge(ctx, req.(*PutEdgeRequest))
@@ -220,7 +220,7 @@ func _LanternService_PutEdge_Handler(srv interface{}, ctx context.Context, dec f
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LanternService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "lantern.v1.LanternService",
+	ServiceName: "graph.v1.LanternService",
 	HandlerType: (*LanternServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -245,5 +245,5 @@ var LanternService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "lantern/v1/lantern.proto",
+	Metadata: "graph/v1/graph.proto",
 }

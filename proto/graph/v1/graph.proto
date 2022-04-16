@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package lantern.v1;
+package graph.v1;
 
 import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
 
-option go_package = "github.com/lantern-proto/go/lanern/v1";
+option go_package = "github.com/lantern-proto/go/graph/v1";
 
 
 message Vertex {

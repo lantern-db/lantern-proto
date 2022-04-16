@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "lantern/v1/lantern.proto",
+    "title": "graph/v1/graph.proto",
     "version": "version not set"
   },
   "tags": [
@@ -190,7 +190,7 @@
         }
       }
     },
-    "lanternv1Status": {
+    "graphv1Status": {
       "type": "string",
       "enum": [
         "STATUS_UNSPECIFIED",
@@ -274,7 +274,7 @@
           "$ref": "#/definitions/v1Graph"
         },
         "status": {
-          "$ref": "#/definitions/lanternv1Status"
+          "$ref": "#/definitions/graphv1Status"
         }
       }
     },
@@ -293,7 +293,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "$ref": "#/definitions/lanternv1Status"
+          "$ref": "#/definitions/graphv1Status"
         }
       }
     },
@@ -301,7 +301,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "$ref": "#/definitions/lanternv1Status"
+          "$ref": "#/definitions/graphv1Status"
         }
       }
     },
@@ -320,7 +320,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "$ref": "#/definitions/lanternv1Status"
+          "$ref": "#/definitions/graphv1Status"
         }
       }
     },
