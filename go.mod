@@ -1,4 +1,4 @@
-module github.com/lantern-proto
+module github.com/lantern-db/lantern-proto
 
 go 1.18
 
